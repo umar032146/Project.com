@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <img class="logo" src="abcd-removebg-preview.png">
+        <a href="portfolio.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="resume.html">Resume</a>
+        <a href="services.html">Skills</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div> 
+
+
+    <div class="skill">
+      <h1 class="skillhead">My Skills:</h1>
+      <ul class="list">
+    
+        <li class="skilllist" id="skk">Communication Skills</li>
+        <li class="skilllist">Analytical skills</li>
+        <li class="skilllist">Problem solving</li>
+        <li class="skilllist">Content writing</li>
+        <li class="skilllist">Graphic designing</li>
+        <li class="skilllist">Time Management</li>
+        <li class="skilllist">Adobe Illustrator</li>
+        <li class="skilllist">Html,CSS </li>
+        <li class="skilllist">Canva</li>
+        <li class="skilllist">Blender</li>
+      </ul>
+    </div>
+
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<div class="footer">
+  <img class="logo lg" src="abcd-removebg-preview.png"> <div class="info">
+         &copy; all rights reserved  Rimsha Ahmad
+ <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-instagram"></a>
+          </div>
+
+      </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+
+        var xValues = ["HTML","CSS", "Nordjs",".NET", "PHP"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = "lightblue";
+  
+new Chart("myChart", {
+  type: "horizontalBar",
+  data: {
+  labels: xValues,
+  
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+  }]
+},
+  options: {
+    legend: {display: false,
+    
+    },
+    title: {
+      display: true,
+      text: "Front End Developement",
+      fontColor: "blue",
+      fontSize: 29
+    },
+   
+    scales: {
+      xAxes: [{ticks: {min: 10, max:60}}]
+    }
+  }
+});
+        </script>
+</body>
+</html>
